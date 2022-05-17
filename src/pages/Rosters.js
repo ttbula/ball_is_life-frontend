@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
-function Rosters() {
+function Rosters(props) {
   const url =
-    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/players";
+    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
   const [list, setList] = useState();
   async function fetchData() {
     const response = await fetch(url);
@@ -11,36 +13,14 @@ function Rosters() {
     console.log(data.data);
   }
 
+  let { abbreviation } = useParams();
+  console.log(abbreviation);
+
   useEffect(() => {
     fetchData();
   }, []);
 
-  return (
-    //FIXME: Running into too many requests. need to save information into mongoDB
-    <div>
-      <h1>Test Page</h1>
-      <h2>Eastern Conference</h2>
-      {list && (
-        <>
-          {list.map((team, index) => {
-            if (team.conference === "East") {
-              return <div key={index}>{team.full_name}</div>;
-            }
-          })}
-        </>
-      )}
-      <h2>Western Conference</h2>
-      {list && (
-        <>
-          {list.map((team, index) => {
-            if (team.conference === "West") {
-              return <div key={index}>{team.full_name}</div>;
-            }
-          })}
-        </>
-      )}
-    </div>
-  );
+  return <>{list && <>{list.abbreviation}</>}</>;
 }
 
 export default Rosters;

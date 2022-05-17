@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   const url =
@@ -16,7 +17,6 @@ function Home() {
   }, []);
 
   return (
-    //FIXME: Running into too many requests. need to save information into mongoDB
     <div>
       <h1>Home Page of all Teams</h1>
       <h2>Eastern Conference</h2>
@@ -24,7 +24,11 @@ function Home() {
         <>
           {list.map((team, index) => {
             if (team.conference === "East") {
-              return <div key={index}>{team.full_name}</div>;
+              return (
+                <Link to={`/${team.abbreviation}`}>
+                  <div key={index}>{team.full_name}</div>
+                </Link>
+              );
             }
           })}
         </>
@@ -34,7 +38,11 @@ function Home() {
         <>
           {list.map((team, index) => {
             if (team.conference === "West") {
-              return <div key={index}>{team.full_name}</div>;
+              return (
+                <Link to={`/${team.abbreviation}`}>
+                  <div key={index}>{team.full_name}</div>
+                </Link>
+              );
             }
           })}
         </>
