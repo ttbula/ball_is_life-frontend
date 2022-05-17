@@ -12,6 +12,7 @@ code {
     monospace;
 }
 
+h1,
 h2 {
   text-align: center;
 }
@@ -47,4 +48,8 @@ a:active {
   font-style: italic;
   display: flex;
   justify-content: center;
+}
+
+.teams {
+  text-align: cent;
 }
