@@ -31,16 +31,14 @@ function App() {
     <Router>
       <nav>
         <Link to="/">
-          {" "}
           <img
             id="jordan"
             src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652887545~hmac=50c1b54bb01aab435421c6ac1baff1c1"
             alt="michael jordan dunking"
-          />{" "}
+          />
         </Link>
-        <Link to="/"> Home </Link>
-        <Link to="/"> Create Player </Link>
-        <Link to="/rosters"> Test </Link>
+        {/* <Link to="/"> Home </Link> */}
+        <Link id="create-link" to="/"> Create Player </Link>
       </nav>
       <Routes>
         <Route path="/" element={<Home URL={URL} teams={teams} />} />
