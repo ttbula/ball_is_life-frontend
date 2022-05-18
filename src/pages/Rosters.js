@@ -1,3 +1,4 @@
+import { toBeEnabled } from "@testing-library/jest-dom/dist/matchers";
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
@@ -15,7 +16,10 @@ function Rosters(props) {
 
   return (
     <div>
-      <h1>{team.city}</h1>
+      <h1>{team.full_name}</h1>
+      <h2>City: {team.city}</h2>
+      <h2>Division: {team.division}</h2>
+      <h2>Conference: {team.conference}ern conference</h2>
     </div>
   );
 }

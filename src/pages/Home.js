@@ -9,13 +9,11 @@ function Home(props) {
       <h2>Eastern Conference</h2>
       {props.teams && (
         <>
-          {props.teams.map((team, index) => {
+          {props.teams.map((team) => {
             if (team.conference === "East") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div key={team.abbreviation} keyProp={team.abbreviation}>
-                    {team.full_name}
-                  </div>
+                  <div key={team.abbreviation}>{team.full_name}</div>
                 </Link>
               );
             }
@@ -25,13 +23,11 @@ function Home(props) {
       <h2>Western Conference</h2>
       {props.teams && (
         <>
-          {props.teams.map((team, index) => {
+          {props.teams.map((team) => {
             if (team.conference === "West") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div key={team.abbreviation} keyProp={team.abbreviation}>
-                    {team.full_name}
-                  </div>
+                  <div key={team.abbreviation}>{team.full_name}</div>
                 </Link>
               );
             }
