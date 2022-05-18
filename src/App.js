@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import React, { useState, useEffect } from "react";
 
 function App() {
+  //FIXME: how would we go about requesting from api when players information is spread accross multiple route pages
   const URL =
     "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
   // const [list, setList] = useState();
@@ -29,6 +30,13 @@ function App() {
   return (
     <Router>
       <nav>
+        <Link to="/">
+          {" "}
+          <img
+            src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652887545~hmac=50c1b54bb01aab435421c6ac1baff1c1"
+            alt="michael jordan dunking"
+          />{" "}
+        </Link>
         <Link to="/"> Home </Link>
         <Link to="/"> Create Player </Link>
         <Link to="/rosters"> Test </Link>

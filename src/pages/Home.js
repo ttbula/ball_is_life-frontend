@@ -13,7 +13,9 @@ function Home(props) {
             if (team.conference === "East") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div key={team.abbreviation}>{team.full_name}</div>
+                  <div className="east" key={team.abbreviation}>
+                    {team.full_name}
+                  </div>
                 </Link>
               );
             }
@@ -27,7 +29,9 @@ function Home(props) {
             if (team.conference === "West") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div key={team.abbreviation}>{team.full_name}</div>
+                  <div className="west" key={team.abbreviation}>
+                    {team.full_name}
+                  </div>
                 </Link>
               );
             }
