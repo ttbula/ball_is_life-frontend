@@ -4,8 +4,28 @@ import Home from "./pages/Home";
 import Player from "./pages/Player";
 import Rosters from "./pages/Rosters";
 import ErrorPage from "./pages/ErrorPage";
+import React, { useState, useEffect } from "react";
 
 function App() {
+  const URL =
+    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
+  // const [list, setList] = useState();
+  const [teams, setTeams] = useState(null);
+
+  function getTeams() {
+    fetch(URL)
+      .then((res) => res.json())
+      .then((res) => setTeams(res.data));
+  }
+
+  useEffect(() => {
+    getTeams();
+  }, []);
+
+  if (setTeams === null) {
+    return <h1>Loading</h1>;
+  }
+
   return (
     <Router>
       <nav>
@@ -14,9 +34,12 @@ function App() {
         <Link to="/rosters"> Test </Link>
       </nav>
       <Routes>
-        <Route path="/" element={<Home URL={URL} />} />
+        <Route path="/" element={<Home URL={URL} teams={teams} />} />
         <Route path="/player/:playername" element={<Player />} />
-        <Route path="/:abbreviation" element={<Rosters URL={URL} />} />
+        <Route
+          path="/:abbreviation"
+          element={<Rosters URL={URL} teams={teams} />}
+        />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
       <div className="footer">Footer Info</div>
