@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Player from "./pages/Player";
 import Rosters from "./pages/Rosters";
 import ErrorPage from "./pages/ErrorPage";
+import Nav from "./components/Nav";
 import React, { useState, useEffect } from "react";
 
 function App() {
@@ -29,17 +30,7 @@ function App() {
 
   return (
     <Router>
-      <nav>
-        <Link to="/">
-          <img
-            id="jordan"
-            src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652887545~hmac=50c1b54bb01aab435421c6ac1baff1c1"
-            alt="michael jordan dunking"
-          />
-        </Link>
-        {/* <Link to="/"> Home </Link> */}
-        <Link id="create-link" to="/"> Create Player </Link>
-      </nav>
+      <Nav />
       <Routes>
         <Route path="/" element={<Home URL={URL} teams={teams} />} />
         <Route path="/player/:playername" element={<Player />} />
