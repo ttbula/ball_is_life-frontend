@@ -14,13 +14,14 @@ function Rosters(props) {
   }
 
   let { abbreviation } = useParams();
-  console.log(abbreviation);
+  let teamAbbreviation = list.abbreviation
+  // console.log(abbreviation);
 
   useEffect(() => {
     fetchData();
   }, []);
 
-  return <>{list && <>{list.abbreviation}</>}</>;
+  return <div>{list && teamAbbreviation}</div>;
 }
 
 export default Rosters;
