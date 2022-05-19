@@ -39,6 +39,7 @@ function CustomPlayers(props) {
             Player: {eachPlayer.first_name} {eachPlayer.last_name}
           </h1>
           <h3>This player plays the {eachPlayer.position} position</h3>
+          <h3>This player has a rating of: {eachPlayer.rating}</h3>
         </Link>
       </div>
     ));

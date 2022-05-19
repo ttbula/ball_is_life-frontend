@@ -14,7 +14,7 @@ function App() {
   const [teams, setTeams] = useState(null);
 
   const [player, setPlayer] = useState(null);
-  const herokuURL = "https://ballislife0.herokuapp.com/player";
+  const herokuURL = "https://ballislife0.herokuapp.com/player/";
 
   function getTeams() {
     fetch(URL)
@@ -28,14 +28,36 @@ function App() {
       .then((result) => setPlayer(result));
   }
 
-  const createPlayers = async (person) => {
+  const createPlayers = async (player) => {
     // make post request to create people
     await fetch(herokuURL, {
       method: "post",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(person),
+      body: JSON.stringify(player),
+    });
+    // update list of people
+    getPlayers();
+  };
+
+  const updatePlayer = async (player, id) => {
+    // make put request to create people
+    await fetch(herokuURL + id, {
+      method: "put",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(player),
+    });
+    // update list of people
+    getPlayers();
+  };
+
+  const deletePlayer = async (id) => {
+    // make delete request to create people
+    await fetch(herokuURL + id, {
+      method: "delete",
     });
     // update list of people
     getPlayers();
@@ -68,7 +90,13 @@ function App() {
         />
         <Route
           path="/player/:id"
-          render={(rp) => <ShowCustomPlayer {...rp} />}
+          element={
+            <ShowCustomPlayer
+              player={player}
+              updatePlayer={updatePlayer}
+              deletePlayer={deletePlayer}
+            />
+          }
         />
         <Route path="/nbaplayers" element={<Player />} />
         <Route
