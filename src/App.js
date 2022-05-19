@@ -4,12 +4,14 @@ import Home from "./pages/Home";
 import Player from "./pages/Player";
 import Rosters from "./pages/Rosters";
 import ErrorPage from "./pages/ErrorPage";
+import Nav from "./components/Nav";
 import React, { useState, useEffect } from "react";
 
 function App() {
   //FIXME: how would we go about requesting from api when players information is spread accross multiple route pages
-  const URL =
-    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
+  // const URL =
+  //   "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
+  const URL = "https://balldontlie.io/api/v1/teams";
   // const [list, setList] = useState();
   const [teams, setTeams] = useState(null);
 
@@ -29,22 +31,10 @@ function App() {
 
   return (
     <Router>
-      <nav>
-        <Link to="/">
-          {" "}
-          <img
-            id="jordan"
-            src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652887545~hmac=50c1b54bb01aab435421c6ac1baff1c1"
-            alt="michael jordan dunking"
-          />{" "}
-        </Link>
-        <Link to="/"> Home </Link>
-        <Link to="/"> Create Player </Link>
-        <Link to="/rosters"> Test </Link>
-      </nav>
+      <Nav />
       <Routes>
         <Route path="/" element={<Home URL={URL} teams={teams} />} />
-        <Route path="/player/:playername" element={<Player />} />
+        <Route path="/player" element={<Player />} />
         <Route
           path="/:abbreviation"
           element={<Rosters URL={URL} teams={teams} />}
