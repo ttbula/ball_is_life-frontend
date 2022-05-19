@@ -8,11 +8,7 @@ import Nav from "./components/Nav";
 import React, { useState, useEffect } from "react";
 
 function App() {
-  //FIXME: how would we go about requesting from api when players information is spread accross multiple route pages
-  // const URL =
-  //   "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
   const URL = "https://balldontlie.io/api/v1/teams";
-  // const [list, setList] = useState();
   const [teams, setTeams] = useState(null);
 
   function getTeams() {
