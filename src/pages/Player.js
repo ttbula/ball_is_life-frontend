@@ -5,7 +5,7 @@ function Player() {
 
   function getPages() {
     // FIXME: prints out 2
-    for (let i = 1; i <= 9; i++) {
+    for (let i = 1; i <= 10; i++) {
       const baseUrl = `https://balldontlie.io/api/v1/players/?page=${i}`;
       fetch(baseUrl)
         .then((res) => res.json())
