@@ -16,7 +16,8 @@ code {
 }
 
 h1,
-h2 {
+h2,
+h3 {
   text-align: center;
 }
 
@@ -84,4 +85,12 @@ a:active {
 
 #create-link {
   padding-top: 20px;
+}
+
+#ATL {
+  background-color: red;
+}
+
+#BOS {
+  background-color: green;
 }
