@@ -13,8 +13,10 @@ function Nav() {
       </Link>
       {/* <Link to="/"> Home </Link> */}
       <Link id="create-link" to="/">
-        {" "}
-        Create Player{" "}
+        Create Player
+      </Link>
+      <Link to="/player">
+        ALL PLAYERS
       </Link>
     </nav>
   );

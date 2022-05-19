@@ -9,8 +9,9 @@ import React, { useState, useEffect } from "react";
 
 function App() {
   //FIXME: how would we go about requesting from api when players information is spread accross multiple route pages
-  const URL =
-    "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
+  // const URL =
+  //   "https://cors-anywhere.herokuapp.com/https://balldontlie.io/api/v1/teams";
+  const URL = "https://balldontlie.io/api/v1/teams";
   // const [list, setList] = useState();
   const [teams, setTeams] = useState(null);
 
@@ -33,7 +34,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home URL={URL} teams={teams} />} />
-        <Route path="/player/:playername" element={<Player />} />
+        <Route path="/player" element={<Player />} />
         <Route
           path="/:abbreviation"
           element={<Rosters URL={URL} teams={teams} />}

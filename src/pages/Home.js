@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 function Home(props) {
@@ -18,6 +18,8 @@ function Home(props) {
                   </div>
                 </Link>
               );
+            } else {
+              return ""; // need a return even if it doesnt return anything
             }
           })}
         </>
@@ -34,6 +36,8 @@ function Home(props) {
                   </div>
                 </Link>
               );
+            } else {
+              return ""; // need a return even if it doesnt return anything
             }
           })}
         </>
