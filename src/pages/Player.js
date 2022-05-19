@@ -1,21 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
 
 function Player() {
   const [players, setPlayers] = useState([]);
 
   function getPages() {
-    for (let i = 1; i <= 2; i++) {
+    // FIXME: prints out 2
+    for (let i = 1; i <= 9; i++) {
       const baseUrl = `https://balldontlie.io/api/v1/players/?page=${i}`;
       fetch(baseUrl)
         .then((res) => res.json())
         .then((res) => setPlayers((prevplayers) => [...prevplayers, res.data]));
+      // .then((res) => setPlayers([...players, res.data]));
     }
   }
   useEffect(() => {
     getPages();
   }, []);
   console.log(players);
+
+  if (setPlayers === null) {
+    return <h1>Loading</h1>;
+  }
 
   return (
     <div>
