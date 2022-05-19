@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import 'bootstrap/dist/css/bootstrap.css';
+import "bootstrap/dist/css/bootstrap.css";
+import { ListGroup } from "react-bootstrap";
 // import 'bootstrap/dist/css/bootstrap.min.js';
 
 function Home(props) {
@@ -9,41 +10,49 @@ function Home(props) {
       <h1>Home Page of all NBA Teams</h1>
       <h2>Eastern Conference</h2>
       {props.teams && (
-        <>
+        <ListGroup>
           {props.teams.map((team) => {
             if (team.conference === "East") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div className="east" key={team.abbreviation}>
-                  {/* <ListGroup> */}
+                  <ListGroup.Item
+                    className="east"
+                    variant={team.abbreviation}
+                    id={team.abbreviation}
+                    key={team.abbreviation}
+                  >
                     {team.full_name}
-                  {/* </ListGroup> */}
-                  </div>
+                  </ListGroup.Item>
                 </Link>
               );
             } else {
               return ""; // need a return even if it doesnt return anything
             }
           })}
-        </>
+        </ListGroup>
       )}
       <h2>Western Conference</h2>
       {props.teams && (
-        <>
+        <ListGroup>
           {props.teams.map((team) => {
             if (team.conference === "West") {
               return (
                 <Link to={`/${team.abbreviation}`}>
-                  <div className="west" key={team.abbreviation}>
+                  <ListGroup.Item
+                    className="west"
+                    variant={team.abbreviation}
+                    id={team.abbreviation}
+                    key={team.abbreviation}
+                  >
                     {team.full_name}
-                  </div>
+                  </ListGroup.Item>
                 </Link>
               );
             } else {
               return ""; // need a return even if it doesnt return anything
             }
           })}
-        </>
+        </ListGroup>
       )}
     </div>
   );
