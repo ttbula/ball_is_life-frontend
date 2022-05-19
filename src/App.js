@@ -23,7 +23,7 @@ function App() {
 
   function getPlayers() {
     fetch(herokuURL)
-      .then((response) => response.json)
+      .then((response) => response.json())
       .then((result) => setPlayer(result));
   }
 
@@ -55,9 +55,16 @@ function App() {
       <Nav />
       <Routes>
         <Route path="/" element={<Home URL={URL} teams={teams} />} />
-        <Route path="/player" element={<CustomPlayers herokuURL={herokuURL}
+        <Route
+          path="/player"
+          element={
+            <CustomPlayers
+              herokuURL={herokuURL}
               player={player}
-              createPlayers={createPlayers}/>} />
+              createPlayers={createPlayers}
+            />
+          }
+        />
         <Route path="/nbaplayers" element={<Player />} />
         <Route
           path="/:abbreviation"

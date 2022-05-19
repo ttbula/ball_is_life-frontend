@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/css/bootstrap.min.js';
 
 function Home(props) {
-  console.log(props.teams);
   return (
     <div>
       <h1>Home Page of all NBA Teams</h1>
