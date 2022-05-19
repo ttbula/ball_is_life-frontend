@@ -7,6 +7,7 @@ import ErrorPage from "./pages/ErrorPage";
 import Nav from "./components/Nav";
 import React, { useState, useEffect } from "react";
 import CustomPlayers from "./pages/CustomPlayers";
+import ShowCustomPlayer from "./pages/ShowCustomPlayer";
 
 function App() {
   const URL = "https://balldontlie.io/api/v1/teams";
@@ -64,6 +65,10 @@ function App() {
               createPlayers={createPlayers}
             />
           }
+        />
+        <Route
+          path="/player/:id"
+          render={(rp) => <ShowCustomPlayer {...rp} />}
         />
         <Route path="/nbaplayers" element={<Player />} />
         <Route
