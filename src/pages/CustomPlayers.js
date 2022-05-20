@@ -109,7 +109,7 @@ function CustomPlayers(props) {
 
   return (
     <section className="body-page">
-      <form onSubmit={handleSubmit}>
+      <form className="create-player" onSubmit={handleSubmit}>
         <input
           type="text"
           value={newForm.first_name}
@@ -145,7 +145,7 @@ function CustomPlayers(props) {
           placeholder="team"
           onChange={handleChange}
         />
-        <input type="submit" value="Create Person" />
+        <input id="create-button" type="submit" value="Create Player" />
       </form>
       <h1 className="water">Water Team</h1>
       {props.player ? loaded() : loading()}

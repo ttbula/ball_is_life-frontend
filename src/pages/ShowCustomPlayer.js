@@ -93,7 +93,7 @@ function ShowCustomPlayer(props) {
             placeholder="team"
             onChange={handleChange}
           />
-          <input type="submit" value="Update Custom Player" />
+          <input id="update-player" type="submit" value="Update Custom Player" />
         </div>
       </form>
     </div>
