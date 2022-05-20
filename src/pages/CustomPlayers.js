@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
 function CustomPlayers(props) {
   // state to hold formData
@@ -7,8 +8,8 @@ function CustomPlayers(props) {
     first_name: "",
     last_name: "",
     position: "",
-    team: "",
     rating: "",
+    team: "",
   });
 
   // handleChange function for form
@@ -25,8 +26,8 @@ function CustomPlayers(props) {
       first_name: "",
       last_name: "",
       position: "",
-      team: "",
       rating: "",
+      team: "",
     });
   };
 
@@ -38,6 +39,7 @@ function CustomPlayers(props) {
           <h1>
             Player: {eachPlayer.first_name} {eachPlayer.last_name}
           </h1>
+          <h3>Team: {eachPlayer.team}</h3>
           <h3>This player plays the {eachPlayer.position} position</h3>
           <h3>This player has a rating of: {eachPlayer.rating}</h3>
         </Link>
@@ -75,16 +77,16 @@ function CustomPlayers(props) {
         />
         <input
           type="text"
-          value={newForm.team}
-          name="team"
-          placeholder="team"
+          value={newForm.rating}
+          name="rating"
+          placeholder="rating"
           onChange={handleChange}
         />
         <input
           type="text"
-          value={newForm.rating}
-          name="rating"
-          placeholder="rating"
+          value={newForm.tean}
+          name="team"
+          placeholder="team"
           onChange={handleChange}
         />
         <input type="submit" value="Create Person" />

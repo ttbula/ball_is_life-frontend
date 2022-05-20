@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 function Player() {
   const [players, setPlayers] = useState([]);
