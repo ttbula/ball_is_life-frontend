@@ -82,7 +82,6 @@ a:active {
 }
 
 .body-page {
-  /* padding-top: 100px; */
   background-color: papayawhip;
   font-family: Geneva, Verdana, Tahoma, sans-serif;
   min-height: calc(100vh - 34px);
@@ -98,6 +97,18 @@ a:active {
   border-radius: 500px;
   width: 500px;
   margin: auto;
+}
+.water-player,
+.fire-player {
+  text-align: center;
+  background-color: rgb(55, 120, 225);
+  border-radius: 500px;
+  width: 300px;
+  margin: auto;
+}
+
+.fire-player {
+  background-color: firebrick;
 }
 
 .list-group {
@@ -450,4 +461,3 @@ textarea {
   background-color: #5a80f2;
   border-radius: 100px;
 }
-

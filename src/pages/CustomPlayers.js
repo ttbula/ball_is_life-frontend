@@ -34,22 +34,6 @@ function CustomPlayers(props) {
   };
 
   console.log(props);
-  // const loaded = () => {
-  //   return props.player.map((eachPlayer) => (
-  //     <div key={eachPlayer._id} className="person">
-  //       <Link to={`/player/${eachPlayer._id}`}>
-  //         <h2>
-  //           Player: {eachPlayer.first_name} {eachPlayer.last_name}
-  //         </h2>
-  //         <div className="playerData">
-  //           <h5>Team: {eachPlayer.team}</h5>
-  //           <h5>This player plays the {eachPlayer.position} position</h5>
-  //           <h5>This player has a rating of: {eachPlayer.rating}</h5>
-  //         </div>
-  //       </Link>
-  //     </div>
-  //   ));
-  // };
   const loaded = () => {
     const water = props.player.map((eachPlayer) => {
       console.log(eachPlayer.team);
@@ -57,7 +41,7 @@ function CustomPlayers(props) {
         return (
           <div key={eachPlayer._id} className="person">
             <Link to={`/player/${eachPlayer._id}`}>
-              <h2>
+              <h2 className="water-player">
                 Player: {eachPlayer.first_name} {eachPlayer.last_name}
               </h2>
             </Link>
@@ -85,7 +69,7 @@ function CustomPlayers(props) {
         return (
           <div key={eachPlayer._id} className="person">
             <Link to={`/player/${eachPlayer._id}`}>
-              <h2>
+              <h2 className="fire-player">
                 Player: {eachPlayer.first_name} {eachPlayer.last_name}
               </h2>
             </Link>

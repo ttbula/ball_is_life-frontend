@@ -6,13 +6,11 @@ function Player() {
   const [players, setPlayers] = useState([]);
 
   function getPages() {
-    // FIXME: prints out 2
-    for (let i = 1; i <= 10; i++) {
+    for (let i = 1; i <= 9; i++) {
       const baseUrl = `https://balldontlie.io/api/v1/players/?page=${i}`;
       fetch(baseUrl)
         .then((res) => res.json())
         .then((res) => setPlayers((prevplayers) => [...prevplayers, res.data]));
-      // .then((res) => setPlayers([...players, res.data]));
     }
   }
   useEffect(() => {
@@ -50,6 +48,3 @@ function Player() {
 }
 
 export default Player;
-// {players.map((player, index) => {
-//   return <div key={player.id}>{player.first_name}</div>;
-// })}
