@@ -13,7 +13,7 @@ function CustomPlayers(props) {
     rating: "",
     team: "",
   });
- 
+
   // handleChange function for form
   //TODO:
   const handleChange = (event) => {
@@ -25,7 +25,6 @@ function CustomPlayers(props) {
     event.preventDefault();
     props.createPlayers(newForm);
     setNewForm({
-
       first_name: "",
       last_name: "",
       position: "",
@@ -35,21 +34,70 @@ function CustomPlayers(props) {
   };
 
   console.log(props);
+  // const loaded = () => {
+  //   return props.player.map((eachPlayer) => (
+  //     <div key={eachPlayer._id} className="person">
+  //       <Link to={`/player/${eachPlayer._id}`}>
+  //         <h2>
+  //           Player: {eachPlayer.first_name} {eachPlayer.last_name}
+  //         </h2>
+  //         <div className="playerData">
+  //           <h5>Team: {eachPlayer.team}</h5>
+  //           <h5>This player plays the {eachPlayer.position} position</h5>
+  //           <h5>This player has a rating of: {eachPlayer.rating}</h5>
+  //         </div>
+  //       </Link>
+  //     </div>
+  //   ));
+  // };
   const loaded = () => {
-    return props.player.map((eachPlayer) => (
-      <div key={eachPlayer._id} className="person">
-        <Link to={`/player/${eachPlayer._id}`}>
-          <h1>
-            Player: {eachPlayer.first_name} {eachPlayer.last_name}
-          </h1>
-          <div className="playerData">
-            <h5>Team: {eachPlayer.team}</h5>
-            <h5>This player plays the {eachPlayer.position} position</h5>
-            <h5>This player has a rating of: {eachPlayer.rating}</h5>
+    const water = props.player.map((eachPlayer) => {
+      console.log(eachPlayer.team);
+      if (eachPlayer.team === "Water") {
+        return (
+          <div key={eachPlayer._id} className="person">
+            <Link to={`/player/${eachPlayer._id}`}>
+              <h2>
+                Player: {eachPlayer.first_name} {eachPlayer.last_name}
+              </h2>
+              <div className="playerData">
+                <h5>Team: {eachPlayer.team}</h5>
+                <h5>This player plays the {eachPlayer.position} position</h5>
+                <h5>This player has a rating of: {eachPlayer.rating}</h5>
+              </div>
+            </Link>
           </div>
-        </Link>
-      </div>
-    ));
+        );
+      } else {
+        return "";
+      }
+    });
+    return water;
+  };
+
+  const loaded2 = () => {
+    const fire = props.player.map((eachPlayer) => {
+      console.log(eachPlayer.team);
+      if (eachPlayer.team !== "Water") {
+        return (
+          <div key={eachPlayer._id} className="person">
+            <Link to={`/player/${eachPlayer._id}`}>
+              <h2>
+                Player: {eachPlayer.first_name} {eachPlayer.last_name}
+              </h2>
+              <div className="playerData">
+                <h5>Team: {eachPlayer.team}</h5>
+                <h5>This player plays the {eachPlayer.position} position</h5>
+                <h5>This player has a rating of: {eachPlayer.rating}</h5>
+              </div>
+            </Link>
+          </div>
+        );
+      } else {
+        return "";
+      }
+    });
+    return fire;
   };
 
   const loading = () => {
@@ -96,7 +144,12 @@ function CustomPlayers(props) {
         />
         <input type="submit" value="Create Person" />
       </form>
+      <h1>Water Team</h1>
       {props.player ? loaded() : loading()}
+      <br></br>
+      <br></br>
+      <h1>Fire Team (Instructors)</h1>
+      {props.player ? loaded2() : loading()}
     </section>
   );
 }
