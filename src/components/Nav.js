@@ -12,7 +12,7 @@ function Nav() {
           alt="michael jordan dunking"
         />
       </Link>
-      <Link to="/nbaplayers">ALL PLAYERS</Link>
+      <Link to="/nbaplayers">All NBA Players</Link>
 
       <Link id="custom-players" to="/player">
         Custom Players
