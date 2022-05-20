@@ -24,13 +24,18 @@ h3 {
 .nav {
   font-weight: bold;
   font-size: 20px;
-  display: flex;
+  display: inline-block;
   justify-content: space-evenly;
   background: rgb(29, 66, 138);
   /* padding: 8px; */
   width: 100%;
   font-family: Geneva, Verdana, Tahoma, sans-serif;
   text-align: center;
+}
+#custom-players-nav,
+#nba-nav,
+#jordan {
+  margin: auto;
 }
 
 a:link {
@@ -172,11 +177,10 @@ a:active {
 }
 
 #jordan {
-  height: 60px;
-  width: 60px;
-  display: flex;
-  align-content: flex-end;
-  margin: auto;
+  height: 100px;
+  width: 100px;
+  padding-top: 20px;
+  display: inline-block;
 }
 
 #create-link {

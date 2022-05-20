@@ -16,9 +16,9 @@ function Nav() {
           </div>
         </div>
       </Link>
-      <Link to="/nbaplayers">All NBA Players</Link>
+      <Link id= "nba-nav" to="/nbaplayers">All NBA Players</Link>
 
-      <Link id="custom-players" to="/player">
+      <Link id="custom-players-nav" to="/player">
         Custom Players
       </Link>
     </nav>
