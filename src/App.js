@@ -142,7 +142,7 @@ function App() {
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
-      <div className="footer">Tim & Mohammed</div>
+      <div className="footer">App by Tim & Mohammed</div>
     </Router>
   );
 }
