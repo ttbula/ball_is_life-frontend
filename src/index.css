@@ -76,6 +76,10 @@ a:active {
   background-color: papayawhip;
 }
 
+.test {
+  text-align: center;
+}
+
 .list-group {
   width: 400px;
   margin: auto;
