@@ -12,7 +12,8 @@ function Rosters(props) {
     });
   }
   let team = findArrayElementByAbbreviation(props.teams, abbreviation);
-  console.log(team);
+  console.log(`THIS IS OUR TEAM${team}`);
+  console.log(`THIS IS OUR IMAGE LINK${props.teamImages.abbreviation}`);
 
   return (
     <div>
@@ -20,6 +21,7 @@ function Rosters(props) {
       <h2>City: {team.city}</h2>
       <h2>Division: {team.division}</h2>
       <h2>Conference: {team.conference}ern conference</h2>
+      <img src={props.teamImages[abbreviation]} alt={abbreviation} />
     </div>
   );
 }
