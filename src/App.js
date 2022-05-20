@@ -8,6 +8,8 @@ import Nav from "./components/Nav";
 import React, { useState, useEffect } from "react";
 import CustomPlayers from "./pages/CustomPlayers";
 import ShowCustomPlayer from "./pages/ShowCustomPlayer";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 function App() {
   const URL = "https://balldontlie.io/api/v1/teams";

@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.css";
 
 function Rosters(props) {
   let { abbreviation } = useParams();

@@ -12,11 +12,11 @@ function Nav() {
           alt="michael jordan dunking"
         />
       </Link>
-      {/* <Link to="/"> Home </Link> */}
+      <Link to="/nbaplayers">ALL PLAYERS</Link>
+
       <Link id="custom-players" to="/player">
         Custom Players
       </Link>
-      <Link to="/nbaplayers">ALL PLAYERS</Link>
     </nav>
   );
 }

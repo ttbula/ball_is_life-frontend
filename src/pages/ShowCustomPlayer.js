@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router";
+import "bootstrap/dist/css/bootstrap.css";
+
 
 function ShowCustomPlayer(props) {
   console.log(props);
