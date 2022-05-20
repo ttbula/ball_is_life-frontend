@@ -117,6 +117,33 @@ a:active {
   padding: 10px;
 }
 
+.customPlayer {
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  justify-content: center;
+  background-color: silver;
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.createTable {
+  text-align: center;
+}
+
+.buttonDelete {
+  display: flex;
+  text-align: center;
+  background-color: red;
+  justify-content: center;
+  margin: auto;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
 .animate-character {
   text-transform: uppercase;
   background-image: linear-gradient(
