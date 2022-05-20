@@ -7,8 +7,9 @@ import { ListGroup } from "react-bootstrap";
 function Home(props) {
   return (
     <div className="body-page">
-      <h2>WELCOME TO BALL IS LIFE!</h2>
-      <h2>Eastern Conference</h2>
+      <h1 className="animate-character">WELCOME TO BALL IS LIFE!</h1>
+      <br></br>
+      <h2 className="animate-character">Eastern Conference Teams</h2>
       {props.teams && (
         <ListGroup className="list-group">
           {props.teams.map((team) => {
@@ -31,7 +32,8 @@ function Home(props) {
           })}
         </ListGroup>
       )}
-      <h2>Western Conference</h2>
+      <br></br>
+      <h2 className="animate-character">Western Conference Teams</h2>
       {props.teams && (
         <ListGroup className="list-group">
           {props.teams.map((team) => {
