@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.css";
+import { ListGroup } from "react-bootstrap";
 
 function Player() {
   const [players, setPlayers] = useState([]);
@@ -26,19 +27,21 @@ function Player() {
   return (
     <div className="body-page">
       {players && (
-        <>
+        <div className="all-players">
           {players.map((each, index) => {
             return each.map((player) => {
               return (
-                <div>
-                  <p>
-                    Full Name {player.first_name} {player.last_name}
+                <div className="nba-players">
+                  <p className="nba-players">
+                    {player.first_name} {player.last_name}: Played for the{" "}
+                    {player.team.full_name}
                   </p>
+                  <br></br>
                 </div>
               );
             });
           })}
-        </>
+        </div>
       )}
     </div>
   );

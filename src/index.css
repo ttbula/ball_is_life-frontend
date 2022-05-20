@@ -101,6 +101,20 @@ a:active {
   justify-content: center;
   font-weight: bold;
   font-family: Geneva, Verdana, Tahoma, sans-serif;
+  text-align: center;
+}
+.nba-players {
+  width: 400px;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  background-color: rgb(203, 179, 179);
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
+  text-align: center;
+  padding: 10px;
 }
 
 .animate-character {
