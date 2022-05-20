@@ -16,7 +16,7 @@ function Rosters(props) {
   console.log(`THIS IS OUR IMAGE LINK${props.teamImages.abbreviation}`);
 
   return (
-    <div>
+    <div className="body-page">
       <h1>{team.full_name}</h1>
       <h2>City: {team.city}</h2>
       <h2>Division: {team.division}</h2>

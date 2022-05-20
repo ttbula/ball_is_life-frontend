@@ -24,7 +24,7 @@ function Player() {
   }
 
   return (
-    <div>
+    <div className="body-page">
       {players && (
         <>
           {players.map((each, index) => {
