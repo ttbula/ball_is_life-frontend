@@ -6,11 +6,11 @@ import { ListGroup } from "react-bootstrap";
 
 function Home(props) {
   return (
-    <div>
-      <h1>Home Page of all NBA Teams</h1>
+    <div className="body-page">
+      <h2>WELCOME TO BALL IS LIFE!</h2>
       <h2>Eastern Conference</h2>
       {props.teams && (
-        <ListGroup>
+        <ListGroup className="list-group">
           {props.teams.map((team) => {
             if (team.conference === "East") {
               return (
@@ -33,7 +33,7 @@ function Home(props) {
       )}
       <h2>Western Conference</h2>
       {props.teams && (
-        <ListGroup>
+        <ListGroup className="list-group">
           {props.teams.map((team) => {
             if (team.conference === "West") {
               return (

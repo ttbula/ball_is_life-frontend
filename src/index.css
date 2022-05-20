@@ -21,16 +21,17 @@ h3 {
   text-align: center;
 }
 
-nav {
+.nav {
   font-weight: bold;
   font-size: 20px;
   display: flex;
   justify-content: space-evenly;
   border: 3px solid rgb(29, 66, 138);
-  background-color: rgb(29, 66, 138);
+  background: rgb(29, 66, 138);
   padding: 8px;
-  /* width: 90%; */
+  width: 100%;
   margin: auto;
+  position: fixed;
 }
 
 a:link {
@@ -71,6 +72,17 @@ a:active {
   text-align: center;
 }
 
+.body-page {
+  padding-top: 100px;
+  background-color: papayawhip;
+}
+
+.list-group {
+  width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
 #jordan {
   height: 60px;
   width: 60px;
@@ -81,12 +93,12 @@ a:active {
 }
 
 #ATL {
-  background-color: #E03A3E;
+  background-color: #e03a3e;
   color: white;
 }
 
 #BOS {
-  background-color: #007A33;
+  background-color: #007a33;
   color: white;
 }
 #BKN {
@@ -94,11 +106,11 @@ a:active {
   color: white;
 }
 #CHA {
-  background-color: #1D1160;
+  background-color: #1d1160;
   color: white;
 }
 #CHI {
-  background-color: #CE1141;
+  background-color: #ce1141;
   color: white;
 }
 #CLE {
@@ -106,31 +118,31 @@ a:active {
   color: white;
 }
 #DAL {
-  background-color: #00538C;
+  background-color: #00538c;
   color: white;
 }
 #DEN {
-  background-color: #0E2240;
+  background-color: #0e2240;
   color: white;
 }
 #DET {
-  background-color: #C8102E;
+  background-color: #c8102e;
   color: white;
 }
 #GSW {
-  background-color: #1D428A;
+  background-color: #1d428a;
   color: white;
 }
 #HOU {
-  background-color: #CE1141;
-  color: white; 
+  background-color: #ce1141;
+  color: white;
 }
 #IND {
-  background-color: #002D62;
+  background-color: #002d62;
   color: white;
 }
 #LAC {
-  background-color:  #C8102E;
+  background-color: #c8102e;
   color: white;
 }
 #LAL {
@@ -138,66 +150,66 @@ a:active {
   color: white;
 }
 #MEM {
-  background-color: #5D76A9;
+  background-color: #5d76a9;
   color: white;
 }
 #MIA {
-  background-color: #98002E;
+  background-color: #98002e;
   color: white;
 }
 #MIL {
-  background-color: #00471B;
+  background-color: #00471b;
   color: white;
 }
 #MIN {
-  background-color: #0C2340;
+  background-color: #0c2340;
   color: white;
 }
 #NOP {
-  background-color: #0C2340;
+  background-color: #0c2340;
   color: white;
 }
 #NYK {
-  background-color: #006BB6;
+  background-color: #006bb6;
   color: white;
 }
 #OKC {
-  background-color: #007AC1;
+  background-color: #007ac1;
   color: white;
 }
 #ORL {
-  background-color: #0077C0;
+  background-color: #0077c0;
   color: white;
 }
 #PHI {
-  background-color: #006BB6;
+  background-color: #006bb6;
   color: white;
 }
 #PHX {
-  background-color: #1D1160;
+  background-color: #1d1160;
   color: white;
 }
 #POR {
-  background-color: #E03A3E;
+  background-color: #e03a3e;
   color: white;
 }
 #SAC {
-  background-color: #5A2D81;
+  background-color: #5a2d81;
   color: white;
 }
 #SAS {
-  background-color: #C4CED4;
+  background-color: #c4ced4;
   color: black;
 }
 #TOR {
-  background-color: #CE1141;
+  background-color: #ce1141;
   color: white;
 }
 #UTA {
-  background-color: #002B5C;
+  background-color: #002b5c;
   color: white;
 }
 #WAS {
-  background-color: #002B5C;
+  background-color: #002b5c;
   color: white;
 }

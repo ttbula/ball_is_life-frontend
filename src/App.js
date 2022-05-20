@@ -10,8 +10,12 @@ import CustomPlayers from "./pages/CustomPlayers";
 import ShowCustomPlayer from "./pages/ShowCustomPlayer";
 import "bootstrap/dist/css/bootstrap.css";
 
-
 function App() {
+  const teamImages = {
+    ATL: "https://upload.wikimedia.org/wikipedia/en/thumb/2/24/Atlanta_Hawks_logo.svg/1200px-Atlanta_Hawks_logo.svg.png",
+    BOS: "https://upload.wikimedia.org/wikipedia/en/thumb/8/8f/Boston_Celtics.svg/1200px-Boston_Celtics.svg.png",
+  };
+
   const URL = "https://balldontlie.io/api/v1/teams";
   const [teams, setTeams] = useState(null);
 
@@ -79,7 +83,10 @@ function App() {
     <Router>
       <Nav />
       <Routes>
-        <Route path="/" element={<Home URL={URL} teams={teams} />} />
+        <Route
+          path="/"
+          element={<Home URL={URL} teams={teams} teamImages={teamImages} />}
+        />
         <Route
           path="/player"
           element={
@@ -103,7 +110,7 @@ function App() {
         <Route path="/nbaplayers" element={<Player />} />
         <Route
           path="/:abbreviation"
-          element={<Rosters URL={URL} teams={teams} />}
+          element={<Rosters URL={URL} teams={teams} teamImages={teamImages} />}
         />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
