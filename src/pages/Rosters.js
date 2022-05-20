@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import { Container, Stack, Col } from "react-bootstrap";
 
 function Rosters(props) {
   let { abbreviation } = useParams();
@@ -17,12 +18,12 @@ function Rosters(props) {
 
   return (
     <div className="body-page">
-      <h1>{team.full_name}</h1>
-      <h2>City: {team.city}</h2>
-      <h2>Division: {team.division}</h2>
-      <h2>Conference: {team.conference}ern conference</h2>
-      <div className="test">
-      <img src={props.teamImages[abbreviation]} alt={abbreviation} />
+       <h1>{team.full_name}</h1>
+       <h2>Division: {team.division}</h2>
+       <h2>City: {team.city}</h2>
+       <h2>Conference: {team.conference}ern conference</h2>
+       <div className="test">
+        <img src={props.teamImages[abbreviation]} alt={abbreviation} />
       </div>
     </div>
   );
