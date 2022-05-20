@@ -34,16 +34,19 @@ function ShowCustomPlayer(props) {
 
   return (
     <div className="body-page">
-      <h2>Show Custom Player</h2>
+      <h2>Custom Player</h2>
+      <div className = "customPlayer">
       <h2>First Name: {player.first_name}</h2>
       <h2>Last Name: {player.last_name}</h2>
       <h2>Position: {player.position}</h2>
       <h2>Team: {player.team}</h2>
       <h2>Rating: {player.rating}</h2>
-      <button id="delete" onClick={removePlayer}>
+      </div>
+      <button id="delete" onClick={removePlayer} className="buttonDelete" >
         DELETE CUSTOM PLAYER
       </button>
       <form onSubmit={handleSubmit}>
+        <div className="createTable">
         <input
           type="text"
           value={editForm.first_name}
@@ -80,6 +83,7 @@ function ShowCustomPlayer(props) {
           onChange={handleChange}
         />
         <input type="submit" value="Update Custom Player" />
+        </div>
       </form>
     </div>
   );
