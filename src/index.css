@@ -88,6 +88,12 @@ a:active {
   text-align: center;
 }
 
+.playerData {
+  text-align: center;
+  background-color: silver;
+  border-radius: 1000px;
+}
+
 .list-group {
   width: 400px;
   margin: auto;

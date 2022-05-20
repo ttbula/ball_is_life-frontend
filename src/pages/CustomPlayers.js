@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
+import { Container, Stack, Col, Row } from "react-bootstrap";
 
 function CustomPlayers(props) {
   // state to hold formData
+
   const [newForm, setNewForm] = useState({
     first_name: "",
     last_name: "",
@@ -11,7 +13,7 @@ function CustomPlayers(props) {
     rating: "",
     team: "",
   });
-
+ 
   // handleChange function for form
   //TODO:
   const handleChange = (event) => {
@@ -23,6 +25,7 @@ function CustomPlayers(props) {
     event.preventDefault();
     props.createPlayers(newForm);
     setNewForm({
+
       first_name: "",
       last_name: "",
       position: "",
@@ -39,9 +42,11 @@ function CustomPlayers(props) {
           <h1>
             Player: {eachPlayer.first_name} {eachPlayer.last_name}
           </h1>
-          <h3>Team: {eachPlayer.team}</h3>
-          <h3>This player plays the {eachPlayer.position} position</h3>
-          <h3>This player has a rating of: {eachPlayer.rating}</h3>
+          <div className="playerData">
+            <h5>Team: {eachPlayer.team}</h5>
+            <h5>This player plays the {eachPlayer.position} position</h5>
+            <h5>This player has a rating of: {eachPlayer.rating}</h5>
+          </div>
         </Link>
       </div>
     ));
