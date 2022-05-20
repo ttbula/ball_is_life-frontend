@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useParams, useNavigate } from "react-router";
 import "bootstrap/dist/css/bootstrap.css";
 
+
 function ShowCustomPlayer(props) {
   console.log(props);
   const navigate = useNavigate();
@@ -33,9 +34,9 @@ function ShowCustomPlayer(props) {
 
   return (
     <div className="body-page">
-      <h1>Show Custom Player</h1>
+      <h2>Show Custom Player</h2>
       <h2>First Name: {player.first_name}</h2>
-      <h2>Last Name: {player.lastname}</h2>
+      <h2>Last Name: {player.last_name}</h2>
       <h2>Position: {player.position}</h2>
       <h2>Team: {player.team}</h2>
       <h2>Rating: {player.rating}</h2>
