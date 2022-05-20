@@ -339,3 +339,39 @@ a:active {
     transform: translateY(0);
   }
 }
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: arial;
+}
+.loader,
+.water,
+.fire {
+  text-decoration: uppercase;
+  font-size: 80px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.1);
+  background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhT9AXpUqUyMjILJ9qn9PDvXpdXE-iqbc-HMXHfU04s6rJ0fbT);
+  background-repeat: repeat-x;
+  -webkit-background-clip: text;
+  animation: animate 60s linear infinite;
+}
+.fire {
+  background-image: url(https://previews.123rf.com/images/hideto111/hideto1111905/hideto111190500046/124349900-fire-background.jpg);
+}
+
+@keyframes animate {
+  0% {
+    background-position: left 0px top 80px;
+  }
+  40% {
+    background-position: left 800px top -50px;
+  }
+
+  80% {
+    background-position: left 400px top -50px;
+  }
+}

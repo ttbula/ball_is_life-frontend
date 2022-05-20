@@ -144,11 +144,11 @@ function CustomPlayers(props) {
         />
         <input type="submit" value="Create Person" />
       </form>
-      <h1>Water Team</h1>
+      <h1 className="water">Water Team</h1>
       {props.player ? loaded() : loading()}
       <br></br>
       <br></br>
-      <h1>Fire Team (Instructors)</h1>
+      <h1 className="fire">Fire Team (Instructors)</h1>
       {props.player ? loaded2() : loading()}
     </section>
   );
