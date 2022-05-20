@@ -6,11 +6,15 @@ function Nav() {
   return (
     <nav className="nav">
       <Link to="/">
-        <img
-          id="jordan"
-          src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652929723~hmac=4f1e5574cb2ce34f762e1f63f22948c5"
-          alt="michael jordan dunking"
-        />
+        <div class="container">
+          <div class="child bounce">
+            <img
+              id="jordan"
+              src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177098.png?token=exp=1652929723~hmac=4f1e5574cb2ce34f762e1f63f22948c5"
+              alt="michael jordan dunking"
+            />
+          </div>
+        </div>
       </Link>
       <Link to="/nbaplayers">All NBA Players</Link>
 

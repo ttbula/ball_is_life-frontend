@@ -26,12 +26,11 @@ h3 {
   font-size: 20px;
   display: flex;
   justify-content: space-evenly;
-  border: 3px solid rgb(29, 66, 138);
   background: rgb(29, 66, 138);
-  padding: 8px;
+  /* padding: 8px; */
   width: 100%;
-  margin: auto;
   font-family: Geneva, Verdana, Tahoma, sans-serif;
+  text-align: center;
 }
 
 a:link {
@@ -148,6 +147,9 @@ a:active {
 #jordan {
   height: 60px;
   width: 60px;
+  display: flex;
+  align-content: flex-end;
+  margin: auto;
 }
 
 #create-link {
@@ -274,4 +276,35 @@ a:active {
 #WAS {
   background-color: #002b5c;
   color: white;
+}
+
+.container {
+  /* border-bottom: 2px solid #000000; */
+  display: flex;
+  /* height: 200px; */
+  /* width: 100%; */
+}
+.child {
+  align-self: flex-end;
+  width: 100px;
+  height: 100px;
+  /* background: #ffb6c1; */
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+.bounce:hover {
+  animation-name: bounce;
+  animation-timing-function: ease;
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
