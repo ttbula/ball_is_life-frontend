@@ -95,7 +95,9 @@ a:active {
 .playerData {
   text-align: center;
   background-color: silver;
-  border-radius: 1000px;
+  border-radius: 500px;
+  width: 500px;
+  margin: auto;
 }
 
 .list-group {
@@ -373,5 +375,23 @@ a:active {
 
   80% {
     background-position: left 400px top -50px;
+  }
+}
+
+.waviy {
+  position: relative;
+}
+.waviy span {
+  position: relative;
+  display: inline-block;
+  font-size: 30px;
+  text-transform: uppercase;
+  animation: flip 2s infinite;
+  animation-delay: calc(0.2s * var(--i));
+}
+@keyframes flip {
+  0%,
+  40% {
+    transform: rotateY(360deg);
   }
 }
