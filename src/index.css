@@ -31,6 +31,7 @@ h3 {
   padding: 8px;
   width: 100%;
   margin: auto;
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
 }
 
 a:link {
@@ -55,7 +56,9 @@ a:active {
 .footer {
   color: black;
   font-weight: bold;
-  font-size: 20px;
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
+
+  font-size: 15px;
   background-color: rgb(200, 16, 46);
   position: absolute;
   width: 100%;
@@ -74,6 +77,7 @@ a:active {
 .body-page {
   /* padding-top: 100px; */
   background-color: papayawhip;
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
 }
 
 .list-group {
@@ -81,6 +85,8 @@ a:active {
   margin: auto;
   display: flex;
   justify-content: center;
+  font-weight: bold;
+  font-family: Geneva, Verdana, Tahoma, sans-serif;
 }
 
 #jordan {
