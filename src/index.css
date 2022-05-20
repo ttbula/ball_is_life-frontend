@@ -80,6 +80,10 @@ a:active {
   font-family: Geneva, Verdana, Tahoma, sans-serif;
 }
 
+.test {
+  text-align: center;
+}
+
 .list-group {
   width: 400px;
   margin: auto;

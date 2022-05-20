@@ -21,7 +21,9 @@ function Rosters(props) {
       <h2>City: {team.city}</h2>
       <h2>Division: {team.division}</h2>
       <h2>Conference: {team.conference}ern conference</h2>
+      <div className="test">
       <img src={props.teamImages[abbreviation]} alt={abbreviation} />
+      </div>
     </div>
   );
 }
