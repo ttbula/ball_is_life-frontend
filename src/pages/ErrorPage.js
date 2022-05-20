@@ -3,10 +3,10 @@ import "bootstrap/dist/css/bootstrap.css";
 
 function ErrorPage() {
   return (
-    <div>
-      <h2>
+    <div className="body-page">
+      <h1 className="fglow">
         ERROR! Sorry, this page does not exist! Double check your parameters
-      </h2>
+      </h1>
     </div>
   );
 }

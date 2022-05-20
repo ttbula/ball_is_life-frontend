@@ -88,12 +88,15 @@ function CustomPlayers(props) {
               <h2>
                 Player: {eachPlayer.first_name} {eachPlayer.last_name}
               </h2>
-              <div className="playerData">
-                <h5>Team: {eachPlayer.team}</h5>
-                <h5>This player plays the {eachPlayer.position} position</h5>
-                <h5>This player has a rating of: {eachPlayer.rating}</h5>
-              </div>
             </Link>
+
+            <div className="playerData">
+              <h5>Team: {eachPlayer.team}</h5>
+              <h5>This player plays the {eachPlayer.position} position</h5>
+              <h5>This player has a rating of: {eachPlayer.rating}</h5>
+            </div>
+            <br></br>
+            <br></br>
           </div>
         );
       } else {
@@ -109,6 +112,14 @@ function CustomPlayers(props) {
 
   return (
     <section className="body-page">
+      <h1 className="water">Water Team</h1>
+      {props.player ? loaded() : loading()}
+      <br></br>
+      <br></br>
+      <h1 className="fire">Fire Team (Instructors)</h1>
+      {props.player ? loaded2() : loading()}
+      <br></br>
+      <br></br>
       <form className="create-player" onSubmit={handleSubmit}>
         <input
           type="text"
@@ -147,12 +158,6 @@ function CustomPlayers(props) {
         />
         <input id="create-button" type="submit" value="Create Player" />
       </form>
-      <h1 className="water">Water Team</h1>
-      {props.player ? loaded() : loading()}
-      <br></br>
-      <br></br>
-      <h1 className="fire">Fire Team (Instructors)</h1>
-      {props.player ? loaded2() : loading()}
     </section>
   );
 }

@@ -26,7 +26,7 @@ function Player() {
 
   return (
     <div className="body-page">
-      <h1>A random list of NBA players from 1979</h1>
+      <h1>A random list of NBA players from 1979-Current</h1>
       <br></br>
       {players && (
         <div className="all-players">
