@@ -52,7 +52,7 @@ function CustomPlayers(props) {
   };
 
   return (
-    <section>
+    <section className="body-page">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
