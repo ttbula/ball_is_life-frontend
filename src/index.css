@@ -78,7 +78,8 @@ a:active {
 }
 
 .list-group {
-  width: 100px;
+  width: 400px;
+  margin: auto;
   display: flex;
   justify-content: center;
 }
